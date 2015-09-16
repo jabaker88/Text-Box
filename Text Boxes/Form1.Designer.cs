@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.Name = new System.Windows.Forms.Label();
-            this.YourName = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.submitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Name
             // 
             this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(73, 97);
+            this.Name.Location = new System.Drawing.Point(37, 47);
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(121, 13);
+            this.Name.Size = new System.Drawing.Size(87, 13);
             this.Name.TabIndex = 0;
-            this.Name.Text = "Please enter your name.";
+            this.Name.Text = "Enter your name:";
             // 
-            // YourName
+            // nameTextBox
             // 
-            this.YourName.Location = new System.Drawing.Point(76, 138);
-            this.YourName.Name = "YourName";
-            this.YourName.Size = new System.Drawing.Size(118, 20);
-            this.YourName.TabIndex = 1;
+            this.nameTextBox.Location = new System.Drawing.Point(40, 63);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(190, 20);
+            this.nameTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -59,16 +60,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome to McBuilds Studios Text Box";
             // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(40, 115);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 3;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 179);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.YourName);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.Name);
-            this.Name = "Form1";
+            //this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,8 +90,9 @@
         #endregion
 
         private System.Windows.Forms.Label Name;
-        private System.Windows.Forms.TextBox YourName;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button submitButton;
     }
 }
 
